@@ -36,6 +36,7 @@ namespace mithep {
       void SetElectronsName(char const* _name) { electronsName_ = _name; }
       void SetMuonsName(char const* _name) { muonsName_ = _name; }
       void SetBaselineMuonIdName(char const* _name, Bool_t _saveAllPass = kFALSE) { setDefinedId_(kMu, BareLeptons::LepBaseline, _name, _saveAllPass); }
+      void SetGlobalOrTrackerMuonIdName(char const* _name, Bool_t _saveAllPass = kFALSE) { setDefinedId_(kMu, BareLeptons::LepGlobalOrTracker, _name, _saveAllPass); }
       void SetVetoMuonIdName(char const* _name, Bool_t _saveAllPass = kFALSE) { setDefinedId_(kMu, BareLeptons::LepVeto, _name, _saveAllPass); }
       void SetFakeMuonIdName(char const* _name, Bool_t _saveAllPass = kFALSE) { setDefinedId_(kMu, BareLeptons::LepFake, _name, _saveAllPass); }
       void SetSoftMuonIdName(char const* _name, Bool_t _saveAllPass = kFALSE) { setDefinedId_(kMu, BareLeptons::LepSoft, _name, _saveAllPass); }

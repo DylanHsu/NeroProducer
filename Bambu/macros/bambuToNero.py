@@ -227,12 +227,18 @@ muonBaselineId = veryLooseMuons.clone('MuonBaselineId',
     IsFilterMode = False,
     InputName = veryLooseMuons.GetOutputName(),
     OutputName = 'BaselineMuonId',
-    MuonClassType = mithep.MuonTools.kGlobalorTracker,
+    MuonClassType = mithep.MuonTools.kSta,
     ApplyD0Cut = False,
     ApplyDZCut = False,
     PtMin = 10.
 )
 
+muonGlobalOrTrackerId = muonBaselineId.clone('MuonBaselineId',
+    OutputName = 'GlobalOrTrackerMuonId',
+    MuonClassType = mithep.MuonTools.kPFGlobalorTracker,
+    ApplyD0Cut = False,
+    ApplyDZCut = False
+)
 # soft is tighter than baseline but with lower pT threshold
 
 muonPrivSoftId = veryLooseMuons.clone('MuonPrivSoftId',
